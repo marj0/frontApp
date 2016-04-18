@@ -1,0 +1,15 @@
+<div ng-controller="CreateTaskCtrl">
+    <h3>Nouvelle tâche:</h3>
+    <form novalidate class="simple-form">
+        <label for="taskNameInput">Nom :</label>
+        <input id="taskNameInput" type="text" name="name" ng-model="name">
+        <label for="taskDescriptionInput">Description :</label>
+        <input id="taskDescriptionInput" type="text" name="description" data-ng-model="description">
+        <input type="submit" data-ng-click="addTask()" value="Enregistrer">
+    </form>
+    <ul>
+        <li data-ng-repeat="task in tasks">
+            {{task | json}}
+        </li>
+    </ul>
+</div>
